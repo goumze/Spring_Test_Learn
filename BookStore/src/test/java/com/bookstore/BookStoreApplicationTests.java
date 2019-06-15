@@ -35,13 +35,13 @@ public class BookStoreApplicationTests {
 		
 	}
 	
+	//Integration test
 	@Test
 	public void check() {
 		HttpHeaders headers = new HttpHeaders();
         headers.set("username", "testmail@mail.com");
         HttpEntity<Employee> request = new HttpEntity<>(headers);
-        
-		assertNotNull(restTemplate.postForEntity("http://localhost:" + port + "/bookstore"+"/login",new HttpEntity<>(headers),Employee.class));
+        assertNotNull(restTemplate.postForEntity("http://localhost:" + port + "/bookstore"+"/login",new HttpEntity<>(headers),Employee.class));
 		//System.out.println(restTemplate.getForObject("http://localhost:" + port + "/bookstore/login",Employee.class));
 	}
 	   
