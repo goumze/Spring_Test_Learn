@@ -26,7 +26,7 @@ public class BookStoreApplicationTests {
     @Autowired
     private RestOperations restTemplate;
     
-      @MockBean
+    @MockBean
     private EmployeeRepository<Employee> employeeRepositoryImpl;
     
 	@Test
